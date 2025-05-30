@@ -37,7 +37,7 @@ export class AppComponent {
     formData.append('key',this.key);
     this.loading=true;
 
-      this.http.post(`file-encrypter-production.up.railway.app:8080/api/${mode}`, formData, {
+      this.http.post(`https://file-encrypter-production.up.railway.app/api/${mode}`, formData, {
         responseType: 'blob',
         observe: 'response' // so we can read headers
         }).subscribe(response => {
